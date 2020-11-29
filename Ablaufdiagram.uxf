@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1134</x>
+      <y>399</y>
+      <w>147</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Traingsplan
+--
+name: string
+übungList: arrayList(Übung) 
+--
+getName()
+getÜbungenList()
+setName()
+setÜbungenArray()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1134</x>
+      <y>525</y>
+      <w>147</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Übung
+--
+übungsbildpfad: url
+übungsbeschreibung:string
+zusatzUrl=string
+--
+getÜbungsbeschreibung()
+getÜbungsbildpfad()
+getZusatzUrl()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1134</x>
+      <y>651</y>
+      <w>147</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>ZusatzMaterial
+--
+übungsname:string
+videopfad:url
+beschreibung:string
+--
+getVideoPfad()
+getBeschreibung()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1197</x>
+      <y>623</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1197</x>
+      <y>497</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>448</y>
+      <w>147</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Mitglied
+--
+name:string
+alter::string
+geschlecht:string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1127</x>
+      <y>245</y>
+      <w>154</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>ContentManagmentSystem
+--
+Traingsplan:Object
+trainingsvideo:mp4
+übungsliste:array
+--
+getTrainingsVideo(übungsName)
+getTraingsplan(übungsname)
+addÜbungtoList(übungsname)
+doesÜbungExsis(übungsname)
+getÜbungsListe()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>364</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>854</x>
+      <y>427</y>
+      <w>147</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>TraingsplanCreator
+--
+name:string
+istGewicht:String
+sollGewicht:String
+--
+radomÜbungslist()
+returnTraingsplan
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>448</y>
+      <w>154</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>441</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>NutzerDatenbank
+--
+Mitglied:Mitglied
+--
+doesMitgliedexist
+addMitglied(Mitglied)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>476</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>231</y>
+      <w>196</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Trainingsapp
+
+--
+login(name) 
+createNewMitglied(name,alter,geslecht)
+getTrainingsplan()
+createTraingsplan()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>889</x>
+      <y>287</y>
+      <w>259</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;350.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>357</y>
+      <w>70</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>301</y>
+      <w>98</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+</diagram>
